@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressBar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreateAccSceneController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="90.0" prefWidth="600.0" style="-fx-background-color: #75a478;">
+         <children>
+            <MFXButton onAction="#switchToEncryptScene" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: #0077c2;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </MFXButton>
+         </children>
+      </HBox>
+      <Label layoutX="250.0" layoutY="109.0" text="Your id is:" textFill="#007ac1">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="idForUser" layoutX="340.0" layoutY="109.0" textFill="#007ac1">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_CENTER" layoutY="150.0" prefHeight="250.0" prefWidth="600.0" style="-fx-background-color: #ffe97d;">
+         <children>
+            <MFXButton buttonType="RAISED" depthLevel="LEVEL3" onAction="#enterPassword" style="-fx-background-color: #03a9f4;" text="Enter password" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </MFXButton>
+            <HBox alignment="CENTER" prefHeight="42.0" prefWidth="600.0">
+               <children>
+                  <Label text="Password Strength:" textFill="#053c07">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="passStrghIndicator" text="Very Strong" textFill="#053c07">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <MFXProgressBar fx:id="progBar" prefHeight="16.0" progress="0.01" />
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="600.0" style="-fx-background-color: #ca9b52;">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <children>
+                  <MFXButton layoutX="251.0" layoutY="50.0" onAction="#createAccount" prefHeight="32.0" prefWidth="99.0" style="-fx-background-color: #ffab91;" text="Create" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </MFXButton>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
