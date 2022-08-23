@@ -207,7 +207,7 @@ public final class Crypt {
 				FileOutputStream os = new FileOutputStream(outFile);
 
 				//Encrypts/Decrypts and writes a buffer each time
-				byte[] buffer = new byte[64];
+				byte[] buffer = new byte[128];
 				int bytesRead;
 				while ((bytesRead = is.read(buffer)) != -1) {
 					byte[] out = cipher.update(buffer, 0, bytesRead);
